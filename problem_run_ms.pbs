@@ -2,6 +2,10 @@
 	#PBS -l walltime=96:00:00
 	#PBS -j oe
 	#PBS -o log.txt
+	#PBS -M your_email_adress@provider
+	#PBS -m abe 
+	
 	cd $PBS_O_WORKDIR
-	module load openmpi/gnu
-	mpirun dtlz2_ms.exe
+	#module load openmpi/gnu
+	
+	mpirun problem.exe
